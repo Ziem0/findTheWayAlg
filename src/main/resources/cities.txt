@@ -4,4 +4,5 @@ Lisboa London 250
 Warsaw London 450 
 London Athens 500
 Lisboa Athens 800
+
 Warsaw Athens

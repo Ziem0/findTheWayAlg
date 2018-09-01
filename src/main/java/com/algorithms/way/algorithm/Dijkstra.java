@@ -37,6 +37,11 @@ public class Dijkstra {
         }
     }
 
+    /**
+     * It deals with adjacent nodes for current active node.
+     * Update vertex values for adjacent nodes.
+     * Update shortest path list based on previous (source) shortest path.
+     */
     private void calculateMinimumDistance(Node evaluationNode, Integer evaluationEdgeWeigh, Node source) {
         Integer sourceDistance = source.getDistance();
         if (sourceDistance + evaluationEdgeWeigh < evaluationNode.getDistance()) {
@@ -47,7 +52,7 @@ public class Dijkstra {
         }
     }
 
-    private Node getLowestDistanceNode() {
+    private Node getLowestDistanceNode() {    // finding the lowest vertex value node
         Node lowestDistanceNode = null;
         int lowestDistance = Integer.MAX_VALUE;
         for (Node node : this.unvisited) {
