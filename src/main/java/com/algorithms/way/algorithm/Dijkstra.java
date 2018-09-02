@@ -1,12 +1,14 @@
 package com.algorithms.way.algorithm;
 
 import com.algorithms.way.model.Node;
+import lombok.Getter;
 
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 
+@Getter
 public class Dijkstra {
 
     private Set<Node> unvisited;
@@ -52,7 +54,11 @@ public class Dijkstra {
         }
     }
 
-    private Node getLowestDistanceNode() {    // finding the lowest vertex value node
+    /**
+     * Finding the lowest-vertex-value node.
+     *
+     */
+    private Node getLowestDistanceNode() {
         Node lowestDistanceNode = null;
         int lowestDistance = Integer.MAX_VALUE;
         for (Node node : this.unvisited) {

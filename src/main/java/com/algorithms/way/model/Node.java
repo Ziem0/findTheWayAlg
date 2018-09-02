@@ -11,8 +11,8 @@ public class Node {
 
     private final String name;
     private Integer distance;
-    LinkedList<Node> shortestPath;
-    Map<Node, Integer> adjacents;
+    private LinkedList<Node> shortestPath;
+    private Map<Node, Integer> adjacents;
 
     public Node(String name) {
         this.name = name;
@@ -39,19 +39,5 @@ public class Node {
             }
         }
         return false;
-    }
-
-    public Set<Node> getDestinations() {
-        return adjacents.keySet();
-    }
-
-    public Integer getTravelCost(Node destination) {
-        Integer result = null;
-        for (Node node : adjacents.keySet()) {
-            if (node.name.equalsIgnoreCase(destination.getName())) {
-                result = adjacents.get(destination);
-            }
-        }
-        return result;
     }
 }

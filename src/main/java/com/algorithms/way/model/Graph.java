@@ -27,21 +27,4 @@ public class Graph {
         }
         return searchedNode;
     }
-
-    public Set<Node> getDestinations(Node node) {
-        Set<Node> result = null;
-        if (isContainNode(node)) {
-            result = node.getDestinations();
-        }
-        return result;
-    }
-
-    private boolean isContainNode(Node searchedNode) {
-        for (Node node : nodes) {
-            if (node.getName().equalsIgnoreCase(searchedNode.getName())) {
-                return true;
-            }
-        }
-        return false;
-    }
 }
